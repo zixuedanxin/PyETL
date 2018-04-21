@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--w3school CDN-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!--stylesheet css/stylesheet.css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <title>PyETL</title>
+</head>
+<body>
+
+<!--sidebar-->
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+        <a class="navbar-brand" href="/">PyETL "python everywhere"</a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-3 col-md-2 hidden-x5-down bg-faded sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="/">
+                            <img src="{{ url_for('static', filename='img/PyETLlogo.png') }}" height="125px" width="160px">
+                        </a>
+                    </li>
+                    <p></p>
+                    <li class="nav-item">
+                        Create Project
+                    </li>
+                    <p>
+
+                    </p>
+                    <li class="nav-item">
+                        <label for="inputId" style="bold">Open File</label>
+                        <input id="inputId" type="file" style="position: fixed; top: -100em">
+                    </li>
+                    <p>
+
+                    </p>
+                    <li class="nav-item">
+                        Help
+                    </li>
+                    <p>
+
+                    </p>
+                    <li class="nav-item">
+                        About
+                    </li>
+                </ul>
+                <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+              </ul>
+                <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"></a>
+                </li>
+              </ul>
+            </nav>
+<!--ends sidebar-->
+<!-- Right Column -->
+            <div class="w3-twothird">
+
+              <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>What is ETL?</h2>
+                <div class="w3-container">
+                  <h5 class="w3-opacity"><b>ETL - Extract, Transform, Load</b></h5>
+                  <p>ETL is short for extract, transform, load, three database functions that are combined into one tool to pull data out of
+                      one database and place it into another database.</p>
+                  <hr>
+                </div>
+                <div class="w3-container">
+                  <h5 class="w3-opacity"><b>Extract</b></h5>
+                  <p>Is the process of reading data from a database. In this stage, the data is collected, often from multiple and different
+                      types of sources.</p>
+                  <hr>
+                </div>
+                <div class="w3-container">
+                  <h5 class="w3-opacity"><b>Transform</b></h5>
+                  <p>is the process of converting the extracted data from its previous form into the form it needs to be in so that it can be
+                      placed into another database. Transformation occurs by using rules or lookup tables or by combining the data with other data.</p>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Load</b></h5>
+                    <p>Is the process of writing the data into the target database.</p>
+                </div>
+              </div>
+
+              <div class="w3-container w3-card w3-white">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>How it Works</h2>
+                <div class="w3-container">
+                  <p>Data from one or more sources is extracted and then copied to the data warehouse. When dealing with large volumes of data and
+                      multiple source systems, the data is consolidated. ETL is used to migrate data from one database to another, and is often the
+                      specific process required to load data to and from data marts and data warehouses, but is a process that is also used to to large
+                      convert (transform) databases from one format or type to another.
+                  </p>
+                    <img src="/static/img/etl-diagram.JPG">
+                  <hr>
+                </div>
+              </div>
+<!-- End Right Column -->
+    </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
